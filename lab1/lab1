@@ -1,0 +1,72 @@
+Yi An CS265 Lab1
+
+
+Q1
+.bash_profile is executed for login shells, while .bashrc is executed for interactive non-login shells
+
+Q2
+Done
+
+Q3
+A list of filename, username, and permissions  
+
+Q4
+Gives owner the read & write, all others have only read
+
+Q5
+Gives the owner and group all permissions, and gives read and execute to everyone else
+
+Q6
+Yes
+
+Q7
+Yes
+
+Q8
+Counld not execute hello.bash
+
+Q9
+chmod 500 or chmod 300 
+
+Q10
+This file is readonly
+
+Q11
+ls *: list all the file names
+ls a*: no such file or directory
+ls *m*: no such file or directory
+ls anno?: no such file or directory
+ls annoy?: no such file or directory
+
+Q12
+vi a space actually creates two files
+
+Q13
+No such file or directory
+Is a < b?
+USER is ya323
+\$USER is $USER
+Today is Thu Apr  6 21:17:38 EDT 2017
+Today is Thu Apr  6 21:18:17 EDT 2017
+Today is `date`
+cannot access 'e*': No such file or directory
+Files that start w/e:
+
+Q14
+The former is sorting with default rules. The latter is sorting by comparing the string numeric value
+
+Q15
+sort -rn
+
+Q16
+Replaced with lab1.tar.gz
+
+Q17
+Afer unzip, *.tgz is unzipped and becomes *.tar.gz
+
+Q18
+grep -rnw -e "Vacation" /
+
+Q19
+find -name "lab1"
+

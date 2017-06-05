@@ -1,0 +1,79 @@
+#!/bin/bash
+
+# Check the input argument
+if [ $# -eq 0 ]
+then
+  directory='.'
+else
+	directory=$1
+fi
+# Loop through all subdirecotories
+for subdirectory in $(find $directory -type d); do
+	# Generate xml file
+	xml="$subdirectory/dir.xml"
+	touch $xml
+	echo "<?xml version="1.0" encoding="ISO-8859-1"?>" > $xml
+	echo "<direntry>" >> $xml
+	filesInREADME=("")
+	allFiles=("")
+		# Chek if there is README
+		if [ -e "$subdirectory/README" ]
+		then
+			# -----README exists
+			# Parse the file
+			record=$(awk '{for (i=1;i<=NF;i++) print $i}' FS=":" "$subdirectory/README")
+			tag=""
+			for each in $record; do
+				# Store the files in README
+				filesInREADME=("${filesInREADME[@]}" "$each")
+				# Play with index and required
+				if [[ "$each" == 'index' || "$each" == 'required' ]] ;
+				then
+					if [[ -z $tag ]] ; 
+					then
+						tag="$each"
+						echo -e "\t<$tag>" >> $xml
+					elif [[ $tag != "$each" && ! -z $tag ]] ; 
+					then
+						echo  -e "\t</$tag>" >> $xml
+						tag="$each"
+						echo -e "\t<$tag>" >> $xml
+					fi
+				# Play with files and directories
+				else
+					if [[ -f "$subdirectory/$each" ]] ; 
+					then
+						echo -e "\t\t<file>$each</file>" >> $xml
+					elif [[ -d "$subdirectory/$each" ]]; 
+					then
+						echo -e "\t\t<dir>$each</dir>" >> $xml
+					fi
+				fi
+			done
+			echo -e "\t</$tag>" >> $xml
+		fi
+		# -----Handle files and dirs not in README
+		# Store all the files
+		for f in $(ls $subdirectory); do 
+			allFiles=("${allFiles[@]}" "$f")
+		done
+		# Find the uniq ones of allFiles and filesInREADME
+		uniqArray=`echo ${allFiles[@]} ${filesInREADME[@]} | tr ' ' '\n' | sort | uniq -u`
+		# Play with other files
+		echo -e "\t<other>" >> $xml
+			for file in $uniqArray; do
+				if [[ "$file" != "index" && "$file" != "required" && "$file" != "dir.xml" ]] ;
+				then
+					if [[ -d "$subdirectory/$file" ]] ; 
+					then
+						echo -e "\t\t<dir>$file</dir>" >> $xml
+					else
+						echo -e "\t\t<file>$file</file>" >> $xml
+					fi
+				
+				fi
+			done
+		echo -e "\t</other>" >> $xml
+	echo "</direntry>" >> $xml
+
+done

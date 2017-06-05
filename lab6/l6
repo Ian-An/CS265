@@ -1,0 +1,68 @@
+Q1
+add funtion is for adding a prefix and a sufix to the table. addsufix funciton is for adding a suffix to the hash table.
+
+Q2
+The lookup function is used to find a certain prefix. This function is called by generate() and add.
+
+Q3
+a. 3 pointers
+b. 3 pointers
+c. 3 pointers
+d. 2 pointers
+
+Q4
+In this way it just uses the minimal memory.
+
+Q5
+The memory allocated to theses pointer needs to be freed after using these pointers.
+
+Q6
+void cleanup(){
+	State *sp = NULL;
+	State *tmp = NULL;
+	for (int i = 0; i < NHASH; i++)
+	{
+		for (sp = statetab[i]; sp != NULL; sp = tmp)
+		{
+			tmp = sp->next;
+			free(sp);
+		}
+	}
+}
+
+Q7
+Yes, it works properly.
+
+Q8
+I think each string can be freed only once, otherwise it will throw errors. Once it is freed, we cannot access that string anymore.
+
+Q9
+Prefixes are stored in a deque. A deque is double ended and it is a good data structure matching with the prefixes. 
+
+Q10
+A map.
+
+Q11
+Stored in a vector of strings.
+
+Q12
+we no longer need to create our hash table, since we can take advantage of some basic c++ data structures(from STL) for implementation.
+
+Q13
+c++ is slightly slower than c, since we are using the STL.
+
+Q14
+Prefixes are stored as tuples.
+
+Q15
+The dictionary data type.
+
+Q16
+In a list.
+
+Q17
+Python code looks cleaner.
+
+Q18
+Python is slower thant C++, since everythin is stored in objects in Python, which takes up more memory.
+

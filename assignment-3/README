@@ -1,0 +1,4 @@
+This program will convert a sequence number to the potential words or setences.
+There has to be a stdin sequence of numbers, otherwise it will throw some errors.
+The dictionary is based on an environment variable called ACMIA_WORDS, and its path will be passed into wordList function to get the data of the dictionary.
+The compiling, running and cleaning files are all handled by ant. You would just type ant in command line to execute all these functions.

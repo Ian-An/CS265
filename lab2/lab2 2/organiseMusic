@@ -1,0 +1,12 @@
+#!/bin/bash
+for i in *.mp3; do
+	artistName=${i%%-*}
+	songName=${i##*-}
+	echo "$artistName $songName"
+	fullPath="$artistName""/""$songName";
+	if [ ! -d "$artistName" ]
+	then
+		mkdir "$artistName"
+	fi
+	mv "$i" "$fullPath";
+done

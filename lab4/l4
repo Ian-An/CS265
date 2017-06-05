@@ -1,0 +1,106 @@
+Q1.1
+It would be better name not-eof as not_eof. Usually True is defined as 1 nd False is defined as 0. ch is approriate for a character.
+
+Q1.2
+int isSmaller(char* a, char* b)
+{
+	if( strCmp(a,b) < 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}	
+
+}
+
+Q1.3
+Yes, I did.
+
+Q1.4
+if( c != 'y' && c !='Y' )
+	return;
+
+if(length < BUFSIZE) {
+	length = length;
+}
+else {
+	length = BUFSIZE;
+}
+
+if(flag) {
+	flag = 0;
+}
+else {
+	flag = 1;
+}
+
+if(*line == "") {
+	quote = 1;
+}
+else {
+	quote = 0;
+}
+
+if( val == 1) {
+	bit = 1;
+}
+else {
+	bit = 0;
+}
+
+Q1.5
+The method return a pointer back instead of an integer. Not certain about the type variable val and char, since read function requires the input argument to be an int pointer.
+
+Q1.6
+1 1
+1 2
+2 2
+2 3
+
+Q1.7
+if(istty(stdin)) {
+}
+else if(istty(stdout)) {
+}
+else if(istty(stderr)) {
+}
+else {
+	return 0;
+}
+
+if(retval != SUCCESS) {
+	return retval;
+}
+else {
+	return SUCESS;
+}
+
+for (k=0; k<4; k++) {
+		scanf("%lf", &dx);
+		x += dx;
+}
+
+Q1.8
+for (int coun t = 0; count < total; count++) {
+	if (this.getName(count) == nametable.userName()) {
+		return (true);
+	}
+}
+
+Q1.9
+There should be parenthesis around variable c. The macrio will be evaluated more thant onece, since the parameter c appears more than once.
+
+Q1.10
+#define METER_PER_FOOT 0.3048
+#define FOOT_PER_METER 3.28084
+#define FEET_PER_MILE 5280.0
+#define KILOMETER_PER_MILE 1.609344
+#define SQKM_PER_SQMI 2.589988
+
+Q1.11
+The first comment is not correct, since this is a void function and it returns nothing.
+The second comment should be "Test for n > MAX or n is even"
+The comments above the write_message function are correct, while the first of those doesn't clarify what kind of message is created.
+The last comment is the same as 5th comment, which is useless.

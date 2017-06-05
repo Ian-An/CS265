@@ -1,0 +1,41 @@
+Q1
+A list of all files in home directories and subdirectories
+
+Q2
+find -name *.bash
+
+Q3
+./CS265/lab1/hello.bash
+./CS265/lab2/Bash/check.bash
+./CS265/lab2/Bash/eg.bash
+./CS265/lab2/Bash/getopts.bash
+./CS265/lab2/Bash/loop_subshell.bash
+./CS265/lab2/Bash/out.bash
+./CS265/lab2/Bash/rv.bash
+./CS265/lab2/Bash/args.bash
+./CS265/lab2/Bash/func.bash
+./CS265/lab2/Bash/isatty.bash
+./tmp/gotMe.bash
+
+Q4
+Character:2960
+Words:499
+Lines:97
+
+Q5
+grep the breadIsDangerous.txt | wc -l
+
+Q6
+There is a new file called spellExample.bak
+
+Q7
+The diff displays the difference between the original file and modified file line by line.
+
+Q8
+There is no output, since there is no difference between the exact same files.
+
+Q9
+0: last command works fine and no errors
+1: The string cannot be found in this file
+2: Cannot find this file
+

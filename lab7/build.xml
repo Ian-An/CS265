@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<project default = "prob4">
+	
+	<target name="prob1">
+		<javac includeantruntime="false" srcdir='.' includes='prob1.java'/>
+		<java classname='prob1' >
+			<classpath>
+				<pathelement path="${classpath}" />
+				<pathelement location="." />
+			</classpath>
+			<arg value='hundred'/>
+		</java>
+	</target>
+
+	<target name="prob2" depends = 'prob1'>
+		<javac includeantruntime="false" srcdir='.' includes='prob2.java'/>
+		<java classname='prob2' >
+			<arg value='29'/>
+			<classpath>
+				<pathelement path="${classpath}" />
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="prob3" depends= 'prob2'>
+		<javac includeantruntime="false" srcdir='.' includes='prob3.java'/>
+		<java classname='prob3' >
+			<arg value='1704'/>
+			<classpath>
+				<pathelement path="${classpath}" />
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+	<target name="prob4" depends='prob3'>
+		<javac includeantruntime="false" srcdir='.' includes='prob4.java'/>
+		<java classname='prob4' >
+			<arg value='2'/>
+			<classpath>
+				<pathelement path="${classpath}" />
+				<pathelement location="." />
+			</classpath>
+		</java>
+	</target>
+</project>

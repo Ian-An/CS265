@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project default='test' basedir='.'>
+	<path id="gInt.class.path">
+		<pathelement path='${CLASSPATH}'/>
+		<pathelement location='/usr/share/java/junit.jar'/>
+		<pathelement location='.'/>
+	</path>
+	
+	
+	<target name="run">
+		<java classname='gInt'/>
+	</target>
+
+	<target name="gInt" depends="run">
+		<javac includeantruntime="false " srcdir='./' includes='gInt.java'/>
+	</target>
+
+	<target name="gIntTest" depends="gInt">
+		<javac includeantruntime="false" srcdir='./' includes='gIntTest.java'>
+			<classpath refid="gInt.class.path"/>
+		</javac>
+	</target>
+
+	<target name='test' depends='gIntTest'>
+		<junit>
+			<classpath refid="gInt.class.path"/>
+			<formatter type='plain'/>
+			<test name='gIntTest'/>
+		</junit>
+	</target>
+
+</project>

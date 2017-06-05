@@ -1,0 +1,40 @@
+Q1
+egrep 'the' bright_side_of_life
+
+Q2
+egrep '\<the\>' bright_side_of_life
+
+Q3
+egrep '\<just\>' bright_side_of_life
+
+Q4
+egrep '\<[Jj]ust\>' bright_side_of_life
+
+Q5
+egrep '^[Jj]ust' bright_side_of_life 
+
+Q6
+egrep '\<[bm]ad\>' bright_side_of_life
+
+Q7
+egrep '[d/br]eath\>' bright_side_of_life  
+
+Q8
+egrep '\<you[.,]\>$' bright_side_of_life
+
+Q9
+egrep '\<you[.,]\>$' bright_side_of_life
+
+Q10
+egrep '^$' bright_side_of_life
+
+Q11
+10 blank lines
+
+
+Git
+Q1
+git checkout 61e8a^ -- lab3
+
+Q2
+Check the log of the current repository
