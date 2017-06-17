@@ -1,0 +1,3 @@
+This program takes in an stdin argument to determine its following funtionality.  A environment variable "CDDB" is required.
+The makefile is implemented. Simply type make in the command line to execute this program with options -h -l -d -a in order.
+You could also test this program by ./cbbd.py -options The clean target is not implemented in the makefile, since the temp file is handled by shutil module and there are no other intermediate files(Refer to function: update_database).

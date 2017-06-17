@@ -1,0 +1,26 @@
+Q1
+n	T(n)	T(n)/n		T(n)/n^2	T(n)/n^3
+10000	3.232	0.0003232	3.232E-08	3.232E-12
+20000	7.12	0.000356	1.78E-08	8.9E-13
+30000	7.496	0.000249867	8.32889E-09	2.7763E-13
+40000	15.064	0.0003766	9.415E-09	2.35375E-13
+50000	19.054	0.00038108	7.6216E-09	1.52432E-13
+60000	23.1	0.000385	6.41667E-09	1.06944E-13
+
+
+Conclusion:
+For the T(n)/n the value increases linearly. For T(n)/n^2 the resulting value is close to zero. Thus, n is the lower bound but not tight and n^2 is the upper bound.
+
+
+Q2
+n	T(n)		T(n)/n		T(n)/n^2	T(n)/n^3
+10000	45721602	4572.1602	0.45721602	4.57216E-05
+20000	98107982	4905.3991	0.245269955	1.22635E-05
+30000	153522280	5117.409333	0.170580311	5.68601E-06
+40000	210173451	5254.336275	0.131358407	3.28396E-06
+50000	265180908	5303.61816	0.106072363	2.12145E-06
+60000	319847373	5330.78955	0.088846493	1.48077E-06
+
+
+Conclusion:
+For the T(n)/n the value increases linearly. For T(n)/n^2 the resulting value is close to zero. Thus, n^2 is the upper bound and n is the lower bound but not tight.
